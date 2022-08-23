@@ -1,15 +1,25 @@
+# POINT OF SALE PT GROUP 3
+
+# TITLE OF THE SHOP
 print("*****WINGS CORNER*****")
+
+# WHILE IS A LOOP THAT EXECUTES SAME BLOCK OVER AND OVER UNTIL GIVEN CONDITION IS SATISFIED
+# USED TO LOOP WHEN ANSWER ON "DO YOU WANT TO BUY WINGS?" IS WRONG OR INVALID
 while (1):
     answer = input("Do you want to buy wings? (y/n): ").lower()
+
+    # DEFINE ALL WINGS VARIABLE AS 0 SO THAT WHEN PRODUCT IS NOT CHOSEN IT WILL BE ADDED AS 0, OTHERWISE CODE IS ERROR
     wings_1 = 0
     wings_2 = 0
     wings_3 = 0
     wings_4 = 0
     wings_5 = 0
     if answer == ('y'):
-        print("1. Buffalo Wings -----> $10", "\n2. Garlic Parmesan Wings -----> $12", "\n3. Wings Corner's Original Wings -----> $13", "\n4. BBQ Flavored Wings -----> $15", "\n5. Spicy Wings -----> $15", "\n6. Cash Out", "\n7. Exit")
+        print("\n1. Buffalo Wings -----> $10", "\n2. Garlic Parmesan Wings -----> $12", "\n3. Wings Corner's Original Wings -----> $13", "\n4. BBQ Flavored Wings -----> $15", "\n5. Spicy Wings -----> $15", "\n6. Cash Out", "\n7. Exit")
+
+        # USE WHILE LOOP WHEN ANSWER ON "INPUT CODE" IS WRONG OR INVALID
         while (2):
-            wingscode = int(input("Input Code (1-7):\n"))
+            wingscode = int(input("\nInput Code (1-7):\n"))
 
             if (wingscode == 1):
                 quantity_1 = float(input("Input Quantity:\n"))
@@ -53,8 +63,9 @@ while (1):
                 while (3):
                     received = float(input("Money Received:\n"))
 
+                    # IF MONEY GIVEN BY CUSTOMER IS LESSER THAN THE TOTAL AMOUNT, THEN MONEY IS INSUFFICIENT AND GOES BACK TO "MONEY RECEIVED"
                     if received < total:
-                        print("Insufficient Money")
+                        print("Insufficient Money!")
 
                     else:
                         change = received - total
@@ -66,10 +77,14 @@ while (1):
                 print("Thank you for using our program!")
                 quit()
 
+            # IF CODE INPUT IS GREATER THAN 7, THEN IT IS INVALID AND WHILE LOOP DOES THE JOB
+            elif (wingscode > 7):
+                print("Invalid Code! Try Again!")
+
     if answer == ('n'):
         print("Thank you for using our program!")
         quit()
 
+    # IF NOT Y OR N IS THE ANSWER, THEN IT IS INVALID AND WHILE LOOP DOES THE JOB
     else:
         print("Invalid Keyword! Try again!")
-
