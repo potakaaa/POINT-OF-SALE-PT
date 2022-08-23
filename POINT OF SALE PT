@@ -70,7 +70,7 @@ while (1):
                     else:
                         change = received - total
                         print(f"\nChange: \n${change}")
-                        print("SALES INVOICE")
+                        print("                     SALES INVOICE       ")
                         print("ITEM                     PRICE       QTY         SUBTOTAL")
                         if wings_1 > 0:
                             print(f"Buffalo Wings             $10        {quantity_1}          ${wings_1}")
