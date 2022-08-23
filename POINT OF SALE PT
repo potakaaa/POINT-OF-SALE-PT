@@ -70,6 +70,19 @@ while (1):
                     else:
                         change = received - total
                         print(f"\nChange: \n${change}")
+                        print("SALES INVOICE")
+                        print("ITEM                     PRICE       QTY         SUBTOTAL")
+                        if wings_1 > 0:
+                            print(f"Buffalo Wings             $10        {quantity_1}          ${wings_1}")
+                        if wings_2 > 0:
+                            print(f"Garlic Parmesan Wings     $12        {quantity_2}          ${wings_2}")
+                        if wings_3 > 0:
+                            print(f"Original Wings            $13        {quantity_3}          ${wings_3}")
+                        if wings_4 > 0:
+                            print(f"BBQ Wings                 $15        {quantity_4}          ${wings_4}")
+                        if wings_5 > 0:
+                            print(f"Spicy Wings               $15        {quantity_5}          ${wings_5}")
+                        print(f"                                           TOTAL: ${total}")
                         print("*****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
                         quit()
 
