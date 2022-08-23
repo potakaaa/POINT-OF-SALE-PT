@@ -1,0 +1,75 @@
+print("*****WINGS CORNER*****")
+while (1):
+    answer = input("Do you want to buy wings? (y/n): ").lower()
+    wings_1 = 0
+    wings_2 = 0
+    wings_3 = 0
+    wings_4 = 0
+    wings_5 = 0
+    if answer == ('y'):
+        print("1. Buffalo Wings -----> $10", "\n2. Garlic Parmesan Wings -----> $12", "\n3. Wings Corner's Original Wings -----> $13", "\n4. BBQ Flavored Wings -----> $15", "\n5. Spicy Wings -----> $15", "\n6. Cash Out", "\n7. Exit")
+        while (2):
+            wingscode = int(input("Input Code (1-7):\n"))
+
+            if (wingscode == 1):
+                quantity_1 = float(input("Input Quantity:\n"))
+                wings_1 = wings_1 + 10 * quantity_1
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Subtotal: ${wings_1}")
+                print(f"Total: ${total}")
+
+            elif (wingscode == 2):
+                quantity_2 = float(input("Input Quantity:\n"))
+                wings_2 = wings_2 + 12 * quantity_2
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Subtotal: ${wings_2}")
+                print(f"Total: ${total}")
+
+            elif (wingscode == 3):
+                quantity_3 = float(input("Input Quantity:\n"))
+                wings_3 = wings_3 + 13 * quantity_3
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Subtotal: ${wings_3}")
+                print(f"Total: ${total}")
+
+            elif (wingscode == 4):
+                quantity_4 = float(input("Input Quantity:\n"))
+                wings_4 = wings_4 + 15 * quantity_4
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Subtotal: ${wings_4}")
+                print(f"Total: ${total}")
+
+            elif (wingscode == 5):
+                quantity_5 = float(input("Input Quantity:\n"))
+                wings_5 = wings_5 + 15 * quantity_5
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Subtotal: ${wings_5}")
+                print(f"Total: ${total}")
+
+            elif (wingscode == 6):
+                total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
+                print(f"Total Amount: ${total}")
+
+                while (3):
+                    received = float(input("Money Received:\n"))
+
+                    if received < total:
+                        print("Insufficient Money")
+
+                    else:
+                        change = received - total
+                        print(f"Change: \n${change}")
+                        print("*****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
+                        quit()
+
+            elif (wingscode == 7):
+                print("Thank you for using our program!")
+                quit()
+
+    if answer == ('n'):
+        print("Thank you for using our program!")
+        quit()
+
+    else:
+        print("Invalid Keyword! Try again!")
+
