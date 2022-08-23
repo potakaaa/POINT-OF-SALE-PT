@@ -83,6 +83,8 @@ while (1):
                         if wings_5 > 0:
                             print(f"Spicy Wings               $15        {quantity_5}          ${wings_5}")
                         print(f"                                           TOTAL: ${total}")
+                        print(f"                                            CASH: ${received}")
+                        print(f"                                          CHANGE: ${change}")
                         print("*****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
                         quit()
 
