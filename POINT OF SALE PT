@@ -58,7 +58,7 @@ while (1):
 
             elif (wingscode == 6):
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
-                print(f"Total Amount: ${total}")
+                print(f"\nTotal Amount: ${total}")
 
                 while (3):
                     received = float(input("Money Received:\n"))
@@ -69,7 +69,7 @@ while (1):
 
                     else:
                         change = received - total
-                        print(f"Change: \n${change}")
+                        print(f"\nChange: \n${change}")
                         print("*****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
                         quit()
 
