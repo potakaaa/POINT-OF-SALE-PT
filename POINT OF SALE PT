@@ -23,6 +23,7 @@ while (1):
 
             if (wingscode == 1):
                 quantity_1 = float(input("Input Quantity:\n"))
+                quantity_1 = quantity_1 + quantity_1
                 wings_1 = wings_1 + 10 * quantity_1
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
                 print(f"Subtotal: ${wings_1}")
@@ -30,6 +31,7 @@ while (1):
 
             elif (wingscode == 2):
                 quantity_2 = float(input("Input Quantity:\n"))
+                quantity_2 = quantity_2 + quantity_2
                 wings_2 = wings_2 + 12 * quantity_2
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
                 print(f"Subtotal: ${wings_2}")
@@ -37,6 +39,7 @@ while (1):
 
             elif (wingscode == 3):
                 quantity_3 = float(input("Input Quantity:\n"))
+                quantity_2 = quantity_2 + quantity_2
                 wings_3 = wings_3 + 13 * quantity_3
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
                 print(f"Subtotal: ${wings_3}")
@@ -44,6 +47,7 @@ while (1):
 
             elif (wingscode == 4):
                 quantity_4 = float(input("Input Quantity:\n"))
+                quantity_2 = quantity_2 + quantity_2
                 wings_4 = wings_4 + 15 * quantity_4
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
                 print(f"Subtotal: ${wings_4}")
@@ -51,6 +55,7 @@ while (1):
 
             elif (wingscode == 5):
                 quantity_5 = float(input("Input Quantity:\n"))
+                quantity_2 = quantity_2 + quantity_2
                 wings_5 = wings_5 + 15 * quantity_5
                 total = wings_1 + wings_2 + wings_3 + wings_4 + wings_5
                 print(f"Subtotal: ${wings_5}")
