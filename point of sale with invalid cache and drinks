@@ -56,7 +56,7 @@ while True:
             # USE WHILE LOOP WHEN ANSWER ON "INPUT CODE" IS WRONG OR INVALID
             while (2):
                 try:
-                    wingscode = int(input("\nInput Code (1-7):\n"))
+                    wingscode = int(input("\nInput Code (0-9):\n"))
                     if (wingscode == 1):
                         quantity_1 = int(input("Input Quantity:\n"))
                         wings_1 = wings_1 + float(500) * quantity_1
@@ -141,52 +141,53 @@ while True:
                             # IF TOTAL IS EQUALS TO 0, THEN LOOPS BACK TO WHILE (2)
                             if total == 0:
                                 break
-
-                            received = float(input("Money Received:\n₱"))
-
-                            # IF MONEY GIVEN BY CUSTOMER IS LESSER THAN THE TOTAL AMOUNT, THEN MONEY IS INSUFFICIENT AND GOES BACK TO "MONEY RECEIVED"
-                            if received < total:
-                                print("Insufficient Money!")
-
                             else:
-                                change = received - total
-                                print(f"\nChange: \n₱{change}\n")
-                                customer = input("Customer Name: ").upper()
-                                print("===============================================================")
 
-                                print("                       SALES INVOICE       ")
-                                from datetime import date
+                                received = float(input("Money Received:\n₱"))
 
-                                today = date.today()
-                                print(f"                       -{today}-           ")
-                                print(f"Cashier: {storelogin}")
-                                print(f"Customer: {customer}")
-                                print("ITEM                        PRICE       QTY         SUBTOTAL")
+                                # IF MONEY GIVEN BY CUSTOMER IS LESSER THAN THE TOTAL AMOUNT, THEN MONEY IS INSUFFICIENT AND GOES BACK TO "MONEY RECEIVED"
+                                if received < total:
+                                    print("Insufficient Money!")
 
-                                # WILL ONLY PRINT ITEM ON RECEIPT IF IT HAS VALUE GREATER THAN 0
-                                if wings_1 > 0:
-                                    print(f"Buffalo Wings             ₱500.00        {wings_1_qty}          ₱{wings_1}")
-                                if wings_2 > 0:
-                                    print(f"Garlic Parmesan Wings     ₱600.00        {wings_2_qty}          ₱{wings_2}")
-                                if wings_3 > 0:
-                                    print(f"Original Wings            ₱650.00        {wings_3_qty}          ₱{wings_3}")
-                                if wings_4 > 0:
-                                    print(f"BBQ Wings                 ₱750.00        {wings_4_qty}          ₱{wings_4}")
-                                if wings_5 > 0:
-                                    print(f"Spicy Wings               ₱750.00        {wings_5_qty}          ₱{wings_5}")
-                                if drinks_6 > 0:
-                                    print(f"Iced Tea Pitcher          ₱150.00        {drinks_6_qty}          ₱{drinks_6}")
-                                if drinks_7 > 0:
-                                    print(f"Lemonade Pitcher          ₱150.00        {drinks_7_qty}          ₱{drinks_7}")
-                                if drinks_8 > 0:
-                                    print(f"Canned Soda               ₱50.00         {drinks_8_qty}          ₱{drinks_8}")
+                                else:
+                                    change = received - total
+                                    print(f"\nChange: \n₱{change}\n")
+                                    customer = input("Customer Name: ").upper()
+                                    print("===============================================================")
 
-                                print(f"                                              TOTAL:₱{total}")
-                                print(f"                                               CASH:₱{received}")
-                                print(f"                                             CHANGE:₱{change}")
-                                print("\n  *****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
-                                print("===============================================================")
-                                quit()
+                                    print("                       SALES INVOICE       ")
+                                    from datetime import date
+
+                                    today = date.today()
+                                    print(f"                       -{today}-           ")
+                                    print(f"Cashier: {storelogin}")
+                                    print(f"Customer: {customer}")
+                                    print("ITEM                        PRICE       QTY         SUBTOTAL")
+
+                                    # WILL ONLY PRINT ITEM ON RECEIPT IF IT HAS VALUE GREATER THAN 0
+                                    if wings_1 > 0:
+                                        print(f"Buffalo Wings             ₱500.00        {wings_1_qty}          ₱{wings_1}")
+                                    if wings_2 > 0:
+                                        print(f"Garlic Parmesan Wings     ₱600.00        {wings_2_qty}          ₱{wings_2}")
+                                    if wings_3 > 0:
+                                        print(f"Original Wings            ₱650.00        {wings_3_qty}          ₱{wings_3}")
+                                    if wings_4 > 0:
+                                        print(f"BBQ Wings                 ₱750.00        {wings_4_qty}          ₱{wings_4}")
+                                    if wings_5 > 0:
+                                        print(f"Spicy Wings               ₱750.00        {wings_5_qty}          ₱{wings_5}")
+                                    if drinks_6 > 0:
+                                        print(f"Iced Tea Pitcher          ₱150.00        {drinks_6_qty}          ₱{drinks_6}")
+                                    if drinks_7 > 0:
+                                        print(f"Lemonade Pitcher          ₱150.00        {drinks_7_qty}          ₱{drinks_7}")
+                                    if drinks_8 > 0:
+                                        print(f"Canned Soda               ₱50.00         {drinks_8_qty}          ₱{drinks_8}")
+
+                                    print(f"                                              TOTAL:₱{total}")
+                                    print(f"                                               CASH:₱{received}")
+                                    print(f"                                             CHANGE:₱{change}")
+                                    print("\n  *****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
+                                    print("===============================================================")
+                                    quit()
 
                     elif (wingscode == 0):
                         print("Thank you for using our program!")
@@ -194,7 +195,7 @@ while True:
                     else:
                         print("Invalid Keyword!")
 
-                        # IF CODE INPUT IS GREATER THAN 7, THEN IT IS INVALID AND WHILE LOOP DOES THE JOB
+                        # IF CODE INPUT IS NOT WITHIN (1-0), THEN IT IS INVALID AND WHILE (2) LOOP DOES THE JOB
                 except ValueError:
                     print("Invalid Code! Try Again!")
 
@@ -202,6 +203,6 @@ while True:
             print("\nThank you for using our program!")
             quit()
 
-        # IF NOT Y OR N IS THE ANSWER, THEN IT IS INVALID AND WHILE LOOP DOES THE JOB
+        # IF NOT Y OR N IS THE ANSWER, THEN IT IS INVALID AND WHILE (1) LOOP DOES THE JOB
         else:
-                print("Invalid Keyword! Try again!")
+            print("Invalid Keyword! Try again!")
