@@ -1,0 +1,298 @@
+# POINT OF SALE PT GROUP 3
+
+# TITLE OF THE SHOP
+print("*****WINGS CORNER*****")
+print("\nSTORE LOG IN")
+storelogin = input("CASHIER NAME: ").upper()
+
+# WHILE IS A LOOP THAT EXECUTES SAME BLOCK OVER AND OVER UNTIL GIVEN CONDITION IS SATISFIED
+# USED TO LOOP WHEN ANSWER ON "DO YOU WANT TO ORDER?" IS WRONG OR INVALID
+while (1):
+    answer = input("Do you want to order? (y/n): ").lower()
+
+    # DEFINE ALL WINGS VARIABLE AS 0 SO THAT WHEN PRODUCT IS NOT CHOSEN IT WILL BE ADDED AS 0, OTHERWISE CODE IS ERROR
+    wings_1 = 0
+    wings_2 = 0
+    wings_3 = 0
+    wings_4 = 0
+    wings_5 = 0
+    drinks_6 = 0
+    drinks_7 = 0
+    drinks_8 = 0
+    wings_1_qty = 0
+    wings_2_qty = 0
+    wings_3_qty = 0
+    wings_4_qty = 0
+    wings_5_qty = 0
+    drinks_6_qty = 0
+    drinks_7_qty = 0
+    drinks_8_qty = 0
+    a = 0
+    b = 0
+    c = 0
+    d = 0
+    e = 0
+    f = 0
+    g = 0
+    h = 0
+    total = 0
+    if answer == ('y'):
+        print("==================================================")
+        print("|MENU                            |CODE | PRICE   |")
+        print("--------------------------------------------------")
+        print("|> Buffalo Wings                 | [1] | ₱500.00 |")
+        print("|> Garlic Parmesan Wings         | [2] | ₱600.00 |")
+        print("|> Wings Corner's Original Wings | [3] | ₱650.00 |")
+        print("|> BBQ Flavored Wings            | [4] | ₱750.00 |")
+        print("|> Spicy Wings                   | [5] | ₱750.00 |")
+        print("|> Iced Tea Pitcher              | [6] | ₱150.00 |")
+        print("|> Lemonade Pitcher              | [7] | ₱150.00 |")
+        print("|> Canned Soda                   | [8] | ₱50.00  |")
+        print("|> Cash Out                      | [9] |         |")
+        print("|> Exit                          | [10]|         |")
+        print("|> Cancel Order                  | [0] |         |")
+        print("|> To cancel specific orders, put negative sign  |")
+        print("|  before the code.                              |")
+        print("==================================================")
+
+
+        # USE WHILE LOOP WHEN ANSWER ON "INPUT CODE" IS WRONG OR INVALID
+        while (2):
+            while (3):
+                # the try block lets you test a block of code for errors. The except block lets you handle the error.
+                try:
+                    wingscode = int(input("\nInput Code (0-10):\n"))
+                    if (wingscode == 1):
+                        quantity_1 = int(input("Input Quantity:\n"))
+                        wings_1 = wings_1 + float(500) * quantity_1
+                        a = wings_1 / 500
+                        wings_1_qty = int(a)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Buffalo Wings Subtotal:₱{wings_1}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 2):
+                        quantity_2 = int(input("Input Quantity:\n"))
+                        wings_2 = wings_2 + float(600) * quantity_2
+                        b = wings_2 / 600
+                        wings_2_qty = int(b)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Garlic Parmesan Wings Subtotal:₱{wings_2}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 3):
+                        quantity_3 = int(input("Input Quantity:\n"))
+                        wings_3 = wings_3 + float(650) * quantity_3
+                        c = wings_3 / 650
+                        wings_3_qty = int(c)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Original Wings Subtotal:₱{wings_3}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 4):
+                        quantity_4 = int(input("Input Quantity:\n"))
+                        wings_4 = wings_4 + float(750) * quantity_4
+                        d = wings_4 / 750
+                        wings_4_qty = int(d)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"BBQ Flavored Wings Subtotal:₱{wings_4}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 5):
+                        quantity_5 = int(input("Input Quantity:\n"))
+                        wings_5 = wings_5 + float(750) * quantity_5
+                        e = wings_5 / 750
+                        wings_5_qty = int(e)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Spicy Wings Subtotal:₱{wings_5}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 6):
+                        quantity_6 = int(input("Input Quantity:\n"))
+                        drinks_6 = drinks_6 + float(150) * quantity_6
+                        f = drinks_6 / 150
+                        drinks_6_qty = int(f)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Iced Tea Pitcher Subtotal:₱{drinks_6}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 7):
+                        quantity_7 = int(input("Input Quantity:\n"))
+                        drinks_7 = drinks_7 + float(150) * quantity_7
+                        g = drinks_7 / 150
+                        drinks_7_qty = int(g)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Lemonade Pitcher Subtotal:₱{drinks_7}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 8):
+                        quantity_8 = int(input("Input Quantity:\n"))
+                        drinks_8 = drinks_8 + float(50) * quantity_8
+                        h = drinks_8 / 50
+                        drinks_8_qty = int(h)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                        print(f"Canned Soda Subtotal:₱{drinks_8}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == 9):
+                        if total < 1:
+                            print("You didn't order anything!")
+                            break
+                            # Break is used to control the sequence of the loop. Suppose you want to terminate a loop and skip to the next code after the loop; break will help you do that.
+                            # IF TOTAL IS EQUALS TO 0, THEN LOOPS BACK TO WHILE (3)
+                        else:
+                            total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5)+float(drinks_6)+float(drinks_7)+float(drinks_8)
+                            print(f"\nTotal Amount:₱{total}")
+
+                        while (4):
+
+                            try:
+                                received = float(input("Money Received:\n₱"))
+
+
+                                # IF MONEY GIVEN BY CUSTOMER IS LESSER THAN THE TOTAL AMOUNT, THEN MONEY IS INSUFFICIENT AND GOES BACK TO "MONEY RECEIVED"
+                                if received < total:
+                                    #IF MONEY GIVEN BY CUSTOMER IS LESSER OF THE TOTAL AMOUNT, THEN IT WILL HELP
+                                    insu_change = received - total
+                                    posi_insu = insu_change * -1
+                                    print(f"Insufficient Money:₱{posi_insu}")
+
+                                else:
+                                    change = received - total
+                                    print(f"\nChange: \n₱{change}\n")
+                                    customer = input("Customer Name: ").upper()
+                                    print("===============================================================")
+
+                                    print("                       SALES INVOICE       ")
+                                     # A date in Python is not a data type of its own, but we can import a module named datetime to work with dates as date objects.
+                                    # defines the date class to get a date object containing the current local date.
+                                    import datetime
+
+                                    #The datetime object has a method for formatting date objects into readable strings.
+                                    #The method is called strftime(), and takes one parameter, format, to specify the format of the returned string:
+                                    #strftime - string from time
+
+                                    #format of date Month/Day/Year
+                                    y = datetime.datetime.now()
+                                    #format codes of Local version of date is %x
+                                    d = y.strftime("%x")
+
+                                    #format of time Hour/Minute/Second
+                                    x = datetime.datetime.now()
+                                    #format codes of Local version of time is %X
+                                    t = x.strftime("%X")
+
+                                    print(f"                        -{d}-           ")
+                                    print(f"                        -{t}-           ")
+                                    print(f"Cashier: {storelogin}")
+                                    print(f"Customer: {customer}")
+                                    print("ITEM                        PRICE       QTY         SUBTOTAL")
+
+                                    # WILL ONLY PRINT ITEM ON RECEIPT IF IT HAS VALUE GREATER THAN 0
+                                    if wings_1 > 0:
+                                        print(f"Buffalo Wings             ₱500.00        {wings_1_qty}          ₱{wings_1}")
+                                    if wings_2 > 0:
+                                        print(f"Garlic Parmesan Wings     ₱600.00        {wings_2_qty}          ₱{wings_2}")
+                                    if wings_3 > 0:
+                                        print(f"Original Wings            ₱650.00        {wings_3_qty}          ₱{wings_3}")
+                                    if wings_4 > 0:
+                                        print(f"BBQ Wings                 ₱750.00        {wings_4_qty}          ₱{wings_4}")
+                                    if wings_5 > 0:
+                                        print(f"Spicy Wings               ₱750.00        {wings_5_qty}          ₱{wings_5}")
+                                    if drinks_6 > 0:
+                                        print(f"Iced Tea Pitcher          ₱150.00        {drinks_6_qty}          ₱{drinks_6}")
+                                    if drinks_7 > 0:
+                                        print(f"Lemonade Pitcher          ₱150.00        {drinks_7_qty}          ₱{drinks_7}")
+                                    if drinks_8 > 0:
+                                        print(f"Canned Soda               ₱50.00         {drinks_8_qty}          ₱{drinks_8}")
+
+                                    print(f"                                              TOTAL:₱{total}")
+                                    print(f"                                               CASH:₱{received}")
+                                    print(f"                                             CHANGE:₱{change}")
+                                    print("\n  *****THANK YOU FOR BUYING AT WINGS CORNER! COME AGAIN!*****")
+                                    print("===============================================================")
+                                    quit()
+
+                            # the try block lets you test a block of code for errors. The except block lets you handle the error.
+                            # ValueError is raised when a function receives an argument of the correct type but an inappropriate value.
+                            except ValueError:
+                                print("Invalid Code! Try Again!")
+
+                    elif (wingscode == 10):
+                        print("Thank you for using our program!")
+                        quit()
+
+                    elif (wingscode == 0):
+                        wings_1 = 0
+                        wings_2 = 0
+                        wings_3 = 0
+                        wings_4 = 0
+                        wings_5 = 0
+                        drinks_6 = 0
+                        drinks_7 = 0
+                        drinks_8 = 0
+                        total = float(0)
+                        print(f"Total: ₱{total}")
+
+                    elif (wingscode == -1):
+                        wings_1 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Buffalo Wings Subtotal:₱{wings_1}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -2):
+                        wings_2 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Garlic Parmesan Wings Subtotal:₱{wings_2}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -3):
+                        wings_3 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Original Wings Subtotal:₱{wings_3}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -4):
+                        wings_4 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"BBQ Flavored Wings Subtotal:₱{wings_4}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -5):
+                        wings_5 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Spicy Wings Subtotal:₱{wings_5}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -6):
+                        drinks_6 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Iced Tea Pitcher Subtotal:₱{drinks_6}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -7):
+                        drinks_7 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f"Lemonade Pitcher Subtotal:₱{drinks_7}")
+                        print(f"Total:₱{total}")
+
+                    elif (wingscode == -8):
+                        drinks_8 = float(0)
+                        total = float(wings_1) + float(wings_2) + float(wings_3) + float(wings_4) + float(wings_5) + float(drinks_6) + float(drinks_7) + float(drinks_8)
+                        print(f" Canned Soda Subtotal:₱{drinks_8}")
+                        print(f"Total:₱{total}")
+
+                    else:
+                        print("Invalid Keyword! Try Again!")
+
+                    # IF CODE INPUT IS NOT WITHIN (1-0), THEN IT IS INVALID AND WHILE LOOP DOES THE JOB
+                except ValueError:
+                    print("Invalid Code! Try Again!")
+
+    if answer == ('n'):
+        print("\nThank you for using our program!")
+        quit()
+
+    # IF NOT Y OR N IS THE ANSWER, THEN IT IS INVALID AND WHILE (1) LOOP DOES THE JOB
+    else:
+        print("Invalid Keyword! Try again!")
